@@ -7,10 +7,9 @@ class Polisa
 protected:
 	static int numer;
 	int zawartosc[4];
-	string data_waznosci;
+	char data_waznosci[11];
 public:
-	Polisa();
-	
+	Polisa();	
 	bool weryfikacja_polisy();
 
 };
