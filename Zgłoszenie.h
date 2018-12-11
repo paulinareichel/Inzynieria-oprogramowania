@@ -2,9 +2,10 @@
 #include <string>
 #include "Klient.h"
 
+
 using namespace std;
 
-class Zg這szenie :public Klient
+class Zg這szenie 
 {
 
 	static int Id_zg這szenia;
@@ -12,6 +13,7 @@ class Zg這szenie :public Klient
 public:
 	Zg這szenie();
 	void opisz_zdarzenie();
+	friend class Zapis;
 };
 
 

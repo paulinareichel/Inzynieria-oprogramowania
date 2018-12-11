@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Klient:public Polisa
+class Klient
 {
 protected:
 	string imie;
@@ -15,4 +15,5 @@ public:
 	void Odwolaj_sie_od_decyzji();
 	Klient();
 	~Klient();
+	friend class Zapis;
 };

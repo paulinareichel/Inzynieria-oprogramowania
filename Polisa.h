@@ -13,4 +13,5 @@ protected:
 public:
 	Polisa();	
 	bool weryfikacja_polisy(int);
+	friend class Zapis;
 };

@@ -4,7 +4,7 @@ int Zg這szenie::Id_zg這szenia;
 Zg這szenie::Zg這szenie()
 {
 	Id_zg這szenia++;
-	Klient klient;
+	
 	opisz_zdarzenie();
 }
 

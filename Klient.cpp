@@ -22,7 +22,7 @@ Klient::Klient()
 	cin >> pes;
 	if (size(pes) != 11)
 		cout << "Bledny pesel! Nieprawidlowa ilosc znakow" << endl;
-	Polisa polisa;
+	
 }
 
 void Klient::Odwolaj_sie_od_decyzji()
