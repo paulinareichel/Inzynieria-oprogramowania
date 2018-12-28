@@ -8,7 +8,7 @@ Decision::Decision()
 	cin >> this-> current;
 	while (check == false)
 	{
-		if (this->current != "tak")
+		if (this->current != "tak" && this->current != "Tak")
 		{
 			cout << "Polisa jest nieaktualna" << endl;
 			this->content = "nieaktualna";
@@ -20,7 +20,7 @@ Decision::Decision()
 		{
 			cout << "Zawartosc polisy pokrywa opis zdarzenia?" << endl;
 			cin >> this->content;
-			if (this->content != "tak")
+			if (this->content != "tak" && this->content!="Tak")
 			{
 				cout << "Polisa nie pokrywa opisanego wypadku"<<endl;
 				this->amount = 0;
@@ -62,7 +62,7 @@ int Decision::getamount()
 void Decision::save(Decision* d, Employee* e)
 {
 	fstream file;
-	file.open("Decisions.txt", ios::out | ios::app);
-	file << d->getcurrent() << setw(5) << right << d->getcontent() << setw(5) << right << d->getamount() <<setw(15)<<right<< e->getid()<< endl;
+	file.open("Decisions.txt", ios::in| ios::app);
+	file << d->getcurrent() << setw(8) << right << " | "<< d->getcontent() << setw(9) << right <<"|"<< d->getamount() <<setw(13)<<right<< "|"<<e->getid()<< endl;
 	file.close();
 }
