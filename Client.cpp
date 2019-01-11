@@ -8,13 +8,13 @@ Client::Client()
 	int number = 0;
 	file.open("Baza.txt", ios::in);	
 	cout << "Podaj swoj PESEL" << endl;
-	while()
+	while(true)
 	{
 	cin >> this->PESEL;
-		if(size(this->PESEL == 11) break;
+		if(size(this->PESEL) == 11) break;
 		else cout << "Zly PESEL! Nieprawidlowa ilosc znakow." << endl << "Podaj swoj PESEL jeszcze raz: " << endl;
 	}
-	while()
+	while(true)
 	{
 		while (!file.eof()) 
 		{
@@ -23,8 +23,7 @@ Client::Client()
 			if (!(string::npos == line.find(this->PESEL)))
 			{
 				this->policy = number;
-				break;
-				//cout << this->policy;
+				break;				
 			}
 		}
 		if(this->policy != 0) break;
