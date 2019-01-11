@@ -8,7 +8,7 @@ class Client
 {
 protected:
 	string PESEL;
-	int policy;
+	int policy = 0;
 public:
 	Client();
 	~Client();
