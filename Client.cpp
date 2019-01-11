@@ -8,14 +8,32 @@ Client::Client()
 	int number = 0;
 	file.open("Baza.txt", ios::in);	
 	cout << "Podaj swoj PESEL" << endl;
+	while()
+	{
 	cin >> this->PESEL;
-		while (!file.eof()) {
+		if(size(this->PESEL == 11) break;
+		else cout << "Zly PESEL! Nieprawidlowa ilosc znakow." << endl << "Podaj swoj PESEL jeszcze raz: " << endl;
+	}
+	while()
+	{
+		while (!file.eof()) 
+		{
 			getline(file, line);
 			number++;
-			if (!(string::npos == line.find(this->PESEL))) 
+			if (!(string::npos == line.find(this->PESEL)))
+			{
 				this->policy = number;
-				//cout << this->policy;									
-		}						
+				break;
+				//cout << this->policy;
+			}
+		}
+		if(this->policy != 0) break;
+		else 
+		{
+			cout << "Zly PESEL! Nie ma takiego numeru PESEL w bazie" << endl << "Podaj swoj PESEL jeszcze raz: " << endl;
+			cin >> this->PESEL;
+		}
+	}
 	file.close();
 }
 
