@@ -1,4 +1,14 @@
+#include "Application.h"
 
+
+Application::Application()
+{
+	while (this->description.empty())
+	{
+		cout << "Podaj opis zdarzenia" << endl;
+		cin >> this->description;
+	}
+}
 Application::~Application()
 {
 	//
