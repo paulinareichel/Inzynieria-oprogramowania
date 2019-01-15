@@ -1,15 +1,3 @@
-#include "Application.h"
-
-
-Application::Application()
-{
-	while(this->description.empty())
-	{
-	cout << "Podaj opis zdarzenia" << endl;
-	cin >> this->description;	
-	}		
-}
-
 
 Application::~Application()
 {
@@ -39,9 +27,9 @@ void Application::print(Application* a, Client* c)
 		if (!(string::npos == line.find(c->PESEL)))
 			cout << line << endl;
 	}
-	cout << "-------------------------------------------------------------------------------" << endl;	
+	cout << "-------------------------------------------------------------------------------" << endl;
 	cout << "Numer polisy " << setw(13) << right << " | " << c->getpolicy() << endl;
-	cout << "Numer pesel klienta " << setw(6) << right << " | " <<c->getpesel() << endl;
+	cout << "Numer pesel klienta " << setw(6) << right << " | " << c->getpesel() << endl;
 	cout << "Opis zdarzenia " << setw(11) << right << " | " << a->getdescription() << endl;
 	file.close();
 }
