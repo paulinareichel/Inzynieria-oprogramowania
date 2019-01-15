@@ -2,21 +2,20 @@
 
 Client::Client()
 {
-
 	fstream file;
 	string line;
 	int number = 0;
-	file.open("Baza.txt", ios::in);	
+	file.open("Baza.txt", ios::in);
 	cout << "Podaj swoj PESEL" << endl;
-	while(true)
+	while (true)
 	{
-	cin >> this->PESEL;
-		if(size(this->PESEL) == 11) break;
+		cin >> this->PESEL;
+		if (size(this->PESEL) == 11) break;
 		else cout << "Zly PESEL! Nieprawidlowa ilosc znakow." << endl << "Podaj swoj PESEL jeszcze raz: " << endl;
 	}
-	while(true)
+	while (true)
 	{
-		while (!file.eof()) 
+		while (!file.eof())
 		{
 			getline(file, line);
 			number++;
@@ -26,8 +25,8 @@ Client::Client()
 				break;				
 			}
 		}
-		if(this->policy != 0) break;
-		else 
+		if (this->policy != 0) break;
+		else
 		{
 			cout << "Zly PESEL! Nie ma takiego numeru PESEL w bazie" << endl << "Podaj swoj PESEL jeszcze raz: " << endl;
 			cin >> this->PESEL;
